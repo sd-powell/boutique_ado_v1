@@ -79,6 +79,17 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'   # Allow login with username or email
+ACCOUNT_EMAIL_REQUIRED = True                      # Email is required to register
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'           # Email verification is required
+ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True         # Require confirmation for registration
+ACCOUNT_USERNAME_MIN_LENGTH = 4                    # Minimum username length
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True            # Require email confirmation on signup
+LOGIN_URL = '/accounts/login/'                     # Login URL
+LOGIN_REDIRECT_URL = '/' 
+
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 
 
