@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'products',
     'bag',
     'checkout',
+    
+    # Other apps
+    'crispy_forms',  # For better form rendering
 ]
 
 MIDDLEWARE = [
@@ -57,6 +60,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'boutique_ado.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # Use Bootstrap 4 for crispy forms
 
 TEMPLATES = [
     {
@@ -72,7 +77,12 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',  # Media files context
                 'bag.contexts.bag_contents',  # Custom context processor for bag
+            ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',  # Crispy forms tags
+                'crispy_forms.templatetags.crispy_forms_field',
             ],
         },
     },
