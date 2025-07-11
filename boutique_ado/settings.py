@@ -198,7 +198,6 @@ if 'USE_AWS' in os.environ:
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
-https://boutiques3bucket.s3.amazonaws.com/media/DP0608201517035747M.jpg
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
