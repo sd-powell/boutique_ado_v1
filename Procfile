@@ -1,0 +1,1 @@
+web: gunicorn bou_tique_ado.wsgi:application
