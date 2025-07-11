@@ -29,11 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEVELOPMENT', '')
 
-ALLOWED_HOSTS = [
-    '127.0.0.1', # local host
-    'localhost', # listen for stripe webhooks
-    'bou-tique-ado-644a7e3c54d3.herokuapp.com/',
-]
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost').split(',')
 
 
 INSTALLED_APPS = [
