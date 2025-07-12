@@ -220,3 +220,6 @@ else:
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+print("DEVELOPMENT:", os.environ.get('DEVELOPMENT'))
+print("EMAIL_BACKEND:", EMAIL_BACKEND)
