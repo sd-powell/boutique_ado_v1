@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites', # Required for django-allauth
+    'django.contrib.sites',  # Required for django-allauth
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
-    
+
     # Other apps
     'crispy_forms',  # For better form rendering
     'storages',
@@ -72,8 +72,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),                  # Root templates dir
-            os.path.join(BASE_DIR, 'templates', 'allauth'), 
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -107,7 +107,7 @@ ACCOUNT_EMAIL_CONFIRMATION_REQUIRED = True         # Require confirmation for re
 ACCOUNT_USERNAME_MIN_LENGTH = 4                    # Minimum username length
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True            # Require email confirmation on signup
 LOGIN_URL = '/accounts/login/'                     # Login URL
-LOGIN_REDIRECT_URL = '/' 
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 
@@ -180,7 +180,7 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'boutiques3bucket' # change this to your AWS bucket name
+    AWS_STORAGE_BUCKET_NAME = 'boutiques3bucket'  # change this to your AWS bucket name
     AWS_S3_REGION_NAME = 'us-east-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
